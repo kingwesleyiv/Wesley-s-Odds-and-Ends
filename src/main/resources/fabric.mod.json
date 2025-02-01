@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "wesleys-odds-and-ends",
+	"version": "${version}",
+	"name": "Wesley's Odds and Ends",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/wesleys-odds-and-ends/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.wesley.WesleysOddsAndEnds"
+		],
+		"client": [
+			"com.wesley.WesleysOddsAndEndsClient"
+		],
+		"fabric-datagen": [
+			"com.wesley.WesleysOddsAndEndsDataGenerator"
+		]
+	},
+	"mixins": [
+		"wesleys-odds-and-ends.mixins.json",
+		{
+			"config": "wesleys-odds-and-ends.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.10",
+		"minecraft": "~1.21.4",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
